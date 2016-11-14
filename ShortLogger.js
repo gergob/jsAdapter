@@ -1,9 +1,10 @@
 function ShortLogger(name) {
     this.name = name;
     var LOG_HEADER = '[' + name + ']';
+    var self = this;
     return {
         getName: function getName() {
-            return this.name;
+            return self.name;
         },
         getType: function getType() {
             return 'ShortLogger';
