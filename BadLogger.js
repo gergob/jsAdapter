@@ -1,11 +1,18 @@
 function BadLogger(name) {
+    this.name = name;
     var LOG_HEADER = '[' + name + ']:';
     return {
+        getName: function getName() {
+            return this.name;
+        },
+        getType: function getType() {
+            return 'BadLogger';
+        },
         information: function information(message) {
             console.info(LOG_HEADER + message + '- INFORMATION' );
         },
         debg: function debg(message) {
-            console.debug(LOG_HEADER + message + '- DEBG');
+            console.log(LOG_HEADER + message + '- DEBG');
         },
         w: function w(message) {
             console.warn(LOG_HEADER + message + '- W' );
