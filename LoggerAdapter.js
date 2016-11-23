@@ -30,7 +30,7 @@ function LoggerAdapter(loggerObj) {
         loggerFunctionMapper[CONSTANTS.ERROR] = loggerObj.e;
     }
 
-    var information = function information(message) {
+    function information(message) {
         try {
           loggerFunctionMapper[CONSTANTS.INFORMATION](message);
         }
@@ -39,7 +39,7 @@ function LoggerAdapter(loggerObj) {
         }
     };
 
-    var debug = function debug(message) {
+    function debug(message) {
         try {
           loggerFunctionMapper[CONSTANTS.DEBUG](message);
         }
@@ -48,7 +48,7 @@ function LoggerAdapter(loggerObj) {
         }
     };
 
-    var warning = function warning(message) {
+    function warning(message) {
         try {
           loggerFunctionMapper[CONSTANTS.WARNING](message);
         }
@@ -57,7 +57,7 @@ function LoggerAdapter(loggerObj) {
         }
     };
 
-    var error = function error(message) {
+    function error(message) {
         try {
           loggerFunctionMapper[CONSTANTS.ERROR](message);
         }
